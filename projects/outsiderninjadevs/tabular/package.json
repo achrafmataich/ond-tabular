@@ -1,0 +1,30 @@
+{
+  "name": "@outsiderninjadevs/tabular",
+  "version": "1.1.0",
+  "peerDependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@outsiderninjadevs/core": "^1.1.0",
+    "@angular/cdk": "^16.2.6"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "description": "Ond Tabular is an Angular library for creating customizable tabular data views with features like searching, and sorting with `Drag And Drop` feature. It simplifies the process of displaying tabular data in your Angular applications.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achrafmataich/ond-tabular.git"
+  },
+  "author": "Achraf Mataich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/achrafmataich/ond-tabular/issues"
+  },
+  "homepage": "https://github.com/achrafmataich/ond-tabular#readme",
+  "keywords": ["ond-tabular", "tabular", "datatable", "angular"]
+}

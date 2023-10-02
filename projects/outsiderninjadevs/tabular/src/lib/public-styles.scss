@@ -1,0 +1,47 @@
+.ond-tabular-header-container-public {
+   /* Styles for the `.ond-tabular-header-container-public` class */
+   display: flex;
+   align-items: center;
+   padding: 1em;
+   background-color: #021921;
+   color: white;
+}
+
+.ond-tabular-header-title-public {
+   /* Styles for the `.ond-tabular-header-title-public` class */
+   font-size: 24px;
+   margin-right: 10px;
+   font-weight: bold;
+}
+
+.ond-tabular-header-search-public {
+   /* Styles for the `.ond-tabular-header-search-public` class */
+   flex-grow: 1;
+   display: flex;
+   align-items: center;
+   border: 1px solid #0e3e4e;
+   border-radius: 20px;
+   padding: 2px;
+   margin-right: 10px;
+   background-color: #072c38;
+}
+
+.ond-tabular-header-search-input-public {
+   /* Styles for the `.ond-tabular-header-search-input-public` class */
+   flex-grow: 1;
+   border: none;
+   outline: none;
+   padding: 2px;
+   height: 16px;
+   font-size: 16px;
+   background: none;
+   color: aliceblue;
+   margin: 0 8px 0 8px;
+   caret-color: aliceblue;
+}
+
+.ond-tabular-header-actions-public {
+   /* Styles for the `.ond-tabular-header-actions-public` class */
+   display: flex;
+   align-items: center;
+}

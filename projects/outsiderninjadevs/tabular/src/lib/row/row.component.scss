@@ -1,0 +1,18 @@
+:host {
+  transition: background 0.25s ease;
+}
+
+:host:hover {
+  background: #014055;
+}
+
+:host td {
+  color: #fff;
+  font-weight: 400;
+  padding: 0.65em 1em;
+}
+
+.cdk-drag-placeholder{
+  background-color: #014055;
+  opacity: 0;
+}

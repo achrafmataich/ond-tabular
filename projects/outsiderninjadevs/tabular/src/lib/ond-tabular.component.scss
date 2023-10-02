@@ -1,0 +1,56 @@
+.ond-container {
+    border-radius: 0.5em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.ond-table-container {
+    overflow-x: auto;
+}
+
+.ond-table {
+    background: #012B39;
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+}
+
+.ond-table tbody {
+    overflow-y: auto;
+}
+
+.ond-table th {
+    border-bottom: 1px solid #364043;
+    color: #E2B842;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+.cdk-drop-list-dragging {
+    filter: blur(1px);
+}
+
+.ond-drag-preview {
+    border-radius: 4px;
+    padding: 8px;
+    background-color: rgb(199, 229, 240);
+    border: 2px dashed rgb(33, 105, 134);
+    outline: rgb(199, 229, 240) 2px solid;
+}
+
+.cdk-drag-placeholder {
+    background-color: rgb(17, 70, 79);
+}
+
+/* Animate items as they're being sorted. */
+.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Animate an item that has been dropped. */
+.cdk-drag-animating {
+    transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+}

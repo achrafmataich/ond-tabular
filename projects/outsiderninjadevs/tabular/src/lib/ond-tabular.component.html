@@ -1,0 +1,48 @@
+<div *ngIf="elements && elements.length !== 0" class="ond-container">
+  <ond-tabular-header [tableTitle]="tableTitle || 'Data table'" [(keywords)]="searchKeywords"
+    (downloadClicked)="downloadCSV()"></ond-tabular-header>
+  <div class="ond-table-container">
+    <table class="ond-table">
+      <!-- Use classes for styling -->
+      <thead>
+        <tr>
+          <th *ngFor="let item of keysList">
+            {{ keysMapping && keysMapping[item] || item }}
+          </th>
+        </tr>
+      </thead>
+      <tbody cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="drop($event)">
+        <tr ond-tabular-row *ngFor="let ele of list; let i = index" [element]="ele" [keysList]="keysList"
+          [alignCellMapping]="alignCellMapping" cdkDrag>
+          <div *cdkDragPreview>
+            <ng-container *ngIf="customUI; else noCustomUI">
+              <ng-template [ngTemplateOutlet]="customUI" [ngTemplateOutletContext]="createCustomUIContext(ele, i)">
+              </ng-template>
+            </ng-container>
+            <ng-template #noCustomUI>
+              <div class="ond-drag-preview">
+                <ng-container *ngIf="dragPreviewAttributes; else noDragPreviewAttributes">
+                  <h3 style="font-weight: bold">
+                    {{ ele[dragPreviewAttributes.mainAttribute] }}
+                  </h3>
+                  <p *ngFor="let key of dragPreviewAttributes.otherAttributes">
+                    <strong>{{ key.toString() }}</strong> --
+                    <span>{{ ele[key] ?? "N/A" }}</span>
+                  </p>
+                </ng-container>
+                <ng-template #noDragPreviewAttributes>
+                  <div *ngFor="let key of keysList">
+                    <div>
+                      {{ keysMapping && keysMapping[key] || key }} -- {{ ele[key] ?? "N/A" }}
+                    </div>
+                  </div>
+                </ng-template>
+              </div>
+            </ng-template>
+          </div>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ond-tabular-footer [listLength]="listLength"></ond-tabular-footer>
+</div>
