@@ -24,7 +24,7 @@
  * ></ond-tabular>
  */
 
-import { Component, ContentChild, DoCheck, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 import { DragPreviewMapping, KeyMappings, AlignmentMappings } from './types/mapping';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { DragPreviewCardDirective } from './directives/drag-preview-card.directive';
