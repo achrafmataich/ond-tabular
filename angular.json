@@ -9,7 +9,6 @@
       "sourceRoot": "projects/outsiderninjadevs/tabular/src",
       "prefix": "ond",
       "architect": {
-        
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
@@ -44,8 +43,6 @@
               "projects/outsiderninjadevs/tabular/**/*.html"
             ]
           }
-        }
-        }
         }
       }
     }

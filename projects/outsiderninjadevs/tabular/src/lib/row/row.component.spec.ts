@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RowComponent } from './row.component';
-import { FormsModule } from '@angular/forms';
 
 describe('RowComponent', () => {
   let component: RowComponent<object>;

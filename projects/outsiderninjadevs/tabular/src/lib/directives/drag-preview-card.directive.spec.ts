@@ -11,9 +11,7 @@ class TestComponent {
 }
 
 describe('DragPreviewCardDirective', () => {
-  let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
-  let divEl: any;
 
   let dep1Service: TemplateRef<DragPreviewCardContext<object>>;
   let dep2: ViewContainerRef; // Replace with the actual type of dep2
@@ -25,8 +23,6 @@ describe('DragPreviewCardDirective', () => {
     });
 
     fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    divEl = fixture.nativeElement.querySelector('div');
   });
 
   it('should create an instance', () => {
