@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody cdkDropList cdkDropListOrientation="vertical" (cdkDropListDropped)="drop($event)">
-        <tr ond-tabular-row *ngFor="let ele of list; let i = index" [element]="ele" [keysList]="keysList"
+        <tr ond-row *ngFor="let ele of list; let i = index" [element]="ele" [keysList]="keysList"
           [alignCellMapping]="alignCellMapping" cdkDrag>
           <div *cdkDragPreview>
             <ng-container *ngIf="customUI; else noCustomUI">

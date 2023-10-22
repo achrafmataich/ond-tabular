@@ -42,7 +42,7 @@ import { OndCsvBuilderService } from '@outsiderninjadevs/core';
     "./ond-tabular.component.scss"
   ]
 })
-export class OndTabularComponent<T extends object> implements OnInit, DoCheck {
+export class OndTabularComponent<T extends object> implements OnInit {
 
   /**
    * The array of data elements to be displayed in the table.
@@ -138,6 +138,9 @@ export class OndTabularComponent<T extends object> implements OnInit, DoCheck {
    */
   ngOnInit(): void {
     this._list = this.elements;
+    if(this._list) {
+      this.listLength = this._list.length
+    }
     const _keysList: string[] = this.elements ? [...new Set(this.elements.flatMap(obj => Object.keys(obj)))] : [];
     this.keysList = _keysList.map(val => {
       return val as keyof T;
@@ -147,12 +150,7 @@ export class OndTabularComponent<T extends object> implements OnInit, DoCheck {
   /**
    * Detects changes in the list length and updates `listLength` accordingly.
    */
-  ngDoCheck(): void {
-    if (this.listLength !== this._list.length) {
-      this.listLength = this._list.length;
-    }
-  }
-
+  
   private updateListLength() {
     this.listLength = this._list.length;
   }

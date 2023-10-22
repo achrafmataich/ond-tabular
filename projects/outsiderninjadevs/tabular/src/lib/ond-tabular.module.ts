@@ -16,7 +16,7 @@ import { OndCoreModule } from "@outsiderninjadevs/core";
     HeaderComponent,
     FooterComponent,
     RowComponent,
-    DragPreviewCardDirective
+    DragPreviewCardDirective,
   ],
   providers: [
     OndTabularService,

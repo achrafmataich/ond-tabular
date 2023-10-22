@@ -26,5 +26,11 @@
     "url": "https://github.com/achrafmataich/ond-tabular/issues"
   },
   "homepage": "https://github.com/achrafmataich/ond-tabular#readme",
-  "keywords": ["ond-tabular", "tabular", "datatable", "angular"]
+  "keywords": ["ond-tabular", "tabular", "datatable", "angular"],
+  "funding":[
+    {
+      "type": "Buy me a coffee",
+      "url": "https://www.buymeacoffee.com/achrafmataich"
+    }
+  ]
 }

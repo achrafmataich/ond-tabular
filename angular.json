@@ -32,8 +32,20 @@
             "polyfills": [
               "zone.js",
               "zone.js/testing"
+            ],
+            "karmaConfig": "projects/outsiderninjadevs/tabular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/outsiderninjadevs/tabular/**/*.ts",
+              "projects/outsiderninjadevs/tabular/**/*.html"
             ]
           }
+        }
+        }
         }
       }
     }

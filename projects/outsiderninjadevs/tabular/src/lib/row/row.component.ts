@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { AlignmentMappings, Alignments } from '../types/mapping';
 
 @Component({
-  selector: '[ond-tabular-row]',
+  selector: '[ond-row]',
   templateUrl: './row.component.html',
   styleUrls: ['./row.component.scss']
 })
