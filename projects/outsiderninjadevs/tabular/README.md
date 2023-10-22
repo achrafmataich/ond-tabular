@@ -2,7 +2,9 @@
 
 Ond Tabular is an Angular library for creating customizable tabular data views with features like searching, and sorting with `Drag And Drop` feature. It simplifies the process of displaying tabular data in your Angular applications.
 
-![@outsiderninjadevs/tabular logo](assets/ond-tabular-logo.png)
+![@outsiderninjadevs/tabular logo](https://raw.githubusercontent.com/achrafmataich/ond-tabular/master/projects/outsiderninjadevs/tabular/assets/ond-tabular-logo.png)
+
+[![Node.js CI](https://github.com/achrafmataich/ond-tabular/actions/workflows/nodjs.yaml/badge.svg)](https://github.com/achrafmataich/ond-tabular/actions/workflows/nodjs.yaml)
 
 ## Features
 
