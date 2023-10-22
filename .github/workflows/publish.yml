@@ -21,7 +21,7 @@ jobs:
       - name: npm install and npm CI commands
         run: |
           npm i
-          npm run build:core:ci
+          npm run build:tabular:ci
 
       - name: Check for build
         run: |
