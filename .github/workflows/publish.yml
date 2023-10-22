@@ -1,0 +1,35 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches: [master]
+    types: [closed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: npm install and npm CI commands
+        run: |
+          npm i
+          npm run build:core:ci
+
+      - name: Check for build
+        run: |
+          ls -l
+  
+      - name: NPM Publish
+        uses: JS-DevTools/npm-publish@v2.2.2
+        with:
+          token: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          package: dist/outsiderninjadevs/tabular
+          access: public
