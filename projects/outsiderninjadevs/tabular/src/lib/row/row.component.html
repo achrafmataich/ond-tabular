@@ -1,0 +1,10 @@
+<td
+  *ngFor="let key of keysList"
+  [ngStyle]="
+    alignCellMapping && alignCellMapping[key]
+      ? { 'text-align': getTextAlign(alignCellMapping[key]) }
+      : {}
+  "
+>
+  {{ element[key] ?? "N/A" }}
+</td>

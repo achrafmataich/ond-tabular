@@ -1,0 +1,66 @@
+@import "../public-styles.scss";
+
+.ond-header-container {
+    @extend .ond-tabular-header-container-public;
+}
+
+.ond-header-title {
+    @extend .ond-tabular-header-title-public;
+}
+
+.ond-header-search {
+    @extend .ond-tabular-header-search-public;
+}
+
+.ond-header-search input {
+    @extend .ond-tabular-header-search-input-public;
+}
+
+.ond-header-search svg {
+    margin: 0 8px 0 0;
+}
+
+.ond-header-actions {
+    @extend .ond-tabular-header-actions-public;
+}
+
+.ond-header-actions svg {
+    margin: 0 6px 0 6px;
+}
+
+.ond-header-actions svg:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .ond-header-container {
+        padding: 0.5em;
+    }
+
+    .ond-header-title {
+        font-size: 18px;
+    }
+
+    .ond-header-search{
+        border-radius: 10px;
+        padding: 1px;
+        margin-right: 2px;
+    }
+
+    .ond-header-search input {
+        padding: 2px;
+        height: 12px;
+        font-size: 11px;
+        margin: 0 2px 0 2px;
+    }
+
+    .ond-header-search svg {
+        margin: 0 2px 0 0;
+        height: 10px;
+    }
+
+    .ond-header-actions svg {
+        margin: 0 3px 0 3px;
+        height: 12px;
+    }
+}
