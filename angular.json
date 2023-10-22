@@ -3,5 +3,51 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@outsiderninjadevs/tabular": {
+      "projectType": "library",
+      "root": "projects/outsiderninjadevs/tabular",
+      "sourceRoot": "projects/outsiderninjadevs/tabular/src",
+      "prefix": "ond",
+      "architect": {
+        
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/outsiderninjadevs/tabular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/outsiderninjadevs/tabular/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/outsiderninjadevs/tabular/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/outsiderninjadevs/tabular/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "karmaConfig": "projects/outsiderninjadevs/tabular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/outsiderninjadevs/tabular/**/*.ts",
+              "projects/outsiderninjadevs/tabular/**/*.html"
+            ]
+          }
+        }
+        }
+        }
+      }
+    }
   }
 }
