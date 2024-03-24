@@ -40,11 +40,11 @@ npm install @outsiderninjadevs/ond-tabular
     export class YourModule { }
     ```
 
-1. Create the list of element and the mappers in your component's typescript file
+2. Create the list of element and the mappers in your component's typescript file
 
-    We recommend using our `types` for the mappings.
+   We recommend using our `types` for the mappings.
 
-    What makes this way a good way is that you are sure you respect the types and the mapping logic.
+   What makes this way a good way is that you are sure you respect the types and the mapping logic.
 
     ```ts
     import {KeyMappings, AlignmentMappings, DragPreviewMapping} from '@outsiderninjadevs/ond-tabular'
@@ -89,7 +89,7 @@ npm install @outsiderninjadevs/ond-tabular
     }
     ```
 
-1. Use the `<ond-tabular>` component in your template to display tabular data:
+3. Use the `<ond-tabular>` component in your template to display tabular data:
 
     ```html
     <ond-tabular
@@ -101,7 +101,7 @@ npm install @outsiderninjadevs/ond-tabular
     ></ond-tabular>
     ```
 
-    > This will create a table of the given list, well mapped, aligned as you like, and with a drag and drop preview showing just the attributes you want
+   > This will create a table of the given list, well mapped, aligned as you like, and with a drag and drop preview showing just the attributes you want
 
 ## Configuration
 
@@ -113,36 +113,36 @@ You can customize the drag preview card with the `*ondDragPreviewCard` structura
 
 ```html
 <ond-tabular [elements]="usersList">
-    <!-- this is a tabular with default drag preview -->
+  <!-- this is a tabular with default drag preview -->
 </ond-tabular>
 
 <ond-tabular [elements]="usersList">
-    <!-- this is a tabular with custom drag preview -->
-    <div *ondDragPreviewCard="let user">
-        <div>
-            name: {{ user?.name }}
-            <br />
-            Age: {{ user?.age }}
-            <br />
-            Is an admin:
-            {{ user?.is_an_admin ?? 'N/A' }}
-        </div>
+  <!-- this is a tabular with custom drag preview -->
+  <div *ondDragPreviewCard="let user">
+    <div>
+      name: {{ user?.name }}
+      <br />
+      Age: {{ user?.age }}
+      <br />
+      Is an admin:
+      {{ user?.is_an_admin ?? 'N/A' }}
     </div>
+  </div>
 </ond-tabular>
 
 <ond-tabular [elements]="usersList">
-    <!-- this is a tabular with custom drag preview but also an element index in the table -->
-    <div *ondDragPreviewCard="let user; let i=index">
-        <div>
-            <h3>#{{ i + 1 }}</h3>
-            name: {{ user?.name }}
-            <br />
-            Age: {{ user?.age }}
-            <br />
-            Is an admin:
-            {{ user?.is_an_admin ?? 'N/A' }}
-        </div>
+  <!-- this is a tabular with custom drag preview but also an element index in the table -->
+  <div *ondDragPreviewCard="let user; let i=index">
+    <div>
+      <h3>#{{ i + 1 }}</h3>
+      name: {{ user?.name }}
+      <br />
+      Age: {{ user?.age }}
+      <br />
+      Is an admin:
+      {{ user?.is_an_admin ?? 'N/A' }}
     </div>
+  </div>
 </ond-tabular>
 ```
 
@@ -152,11 +152,11 @@ You can customize the drag preview card with the `*ondDragPreviewCard` structura
 
 You can use a bench of css classes to customize the tabular styles
 
-| CSS Selector | Uses |
-|---|---|
-| `.ond-tabular-header-container-public` | The container of the Header element in the tabular component, try to change it's `background-color` |
-| `.ond-tabular-header-title-public` | The title in the header in the tabular component, try to change it's `color` |
-| `.ond-tabular-header-search-public` | The search bar container in the tabular component, try to change it's `background-color` or maybe it's border color too |
+| CSS Selector                           | Uses                                                                                                                    |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| `.ond-tabular-header-container-public` | The container of the Header element in the tabular component, try to change it's `background-color`                     |
+| `.ond-tabular-header-title-public`     | The title in the header in the tabular component, try to change it's `color`                                            |
+| `.ond-tabular-header-search-public`    | The search bar container in the tabular component, try to change it's `background-color` or maybe it's border color too |
 
 ## License
 
