@@ -1,0 +1,40 @@
+<div style="margin-bottom: 8px">
+  <ond-tabular [elements]="usersList">
+    <!-- this is a tabular with default drag preview -->
+  </ond-tabular>
+</div>
+
+<div style="margin-bottom: 8px">
+  <ond-tabular [elements]="usersList">
+    <!-- this is a tabular with custom drag preview -->
+    <div *ondDragPreviewCard="let user">
+      <div>
+        name: {{ user?.name }}
+        <br />
+        Age: {{ user?.age }}
+        <br />
+        Is an admin:
+        {{ user?.is_an_admin ?? 'N/A' }}
+      </div>
+    </div>
+  </ond-tabular>
+</div>
+
+
+<div style="margin-bottom: 8px">
+  <ond-tabular [elements]="usersList" [alignCellMapping]="alignmentMappings" [keysMapping]="keyMappings">
+    <!-- this is a tabular with custom drag preview but also an element index in the table -->
+    <div *ondDragPreviewCard="let user; let i=index">
+      <div>
+        <h3>#{{ i + 1 }}</h3>
+        name: {{ user?.name }}
+        <br />
+        Age: {{ user?.age }}
+        <br />
+        Is an admin:
+        {{ user?.is_an_admin ?? 'N/A' }}
+      </div>
+    </div>
+  </ond-tabular>
+</div>
+
