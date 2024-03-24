@@ -26,10 +26,14 @@
 
 import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
 import { DragPreviewMapping, KeyMappings, AlignmentMappings } from './types/mapping';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import {CdkDrag, CdkDragDrop, CdkDragPreview, CdkDropList, moveItemInArray} from '@angular/cdk/drag-drop';
 import { DragPreviewCardDirective } from './directives/drag-preview-card.directive';
 import { DragPreviewCardContext } from './types/contexts/DragPreviewCardContext';
 import { OndCsvBuilderService } from '@outsiderninjadevs/core';
+import {NgForOf, NgIf, NgTemplateOutlet} from "@angular/common";
+import {HeaderComponent} from "./header/header.component";
+import {RowComponent} from "./row/row.component";
+import {FooterComponent} from "./footer/footer.component";
 
 
 /**
@@ -40,7 +44,19 @@ import { OndCsvBuilderService } from '@outsiderninjadevs/core';
   templateUrl: './ond-tabular.component.html',
   styleUrls: [
     "./ond-tabular.component.scss"
-  ]
+  ],
+  imports: [
+    NgIf,
+    HeaderComponent,
+    CdkDropList,
+    RowComponent,
+    NgForOf,
+    CdkDragPreview,
+    NgTemplateOutlet,
+    CdkDrag,
+    FooterComponent
+  ],
+  standalone: true
 })
 export class OndTabularComponent<T extends object> implements OnInit {
 
@@ -88,7 +104,7 @@ export class OndTabularComponent<T extends object> implements OnInit {
 
   /**
    * An optional drag preview elements to be shown
-   * 
+   *
    * @example
    * <ond-tabular [elements]="data" [dragPreviewAttributes]="{mainAttribute: 'name', otherAttributes: ["age", "bank_account"]}"></ond-table>
    */
@@ -150,7 +166,7 @@ export class OndTabularComponent<T extends object> implements OnInit {
   /**
    * Detects changes in the list length and updates `listLength` accordingly.
    */
-  
+
   private updateListLength() {
     this.listLength = this._list.length;
   }
@@ -177,7 +193,7 @@ export class OndTabularComponent<T extends object> implements OnInit {
 
   /**
    * Drop event when the user put the element in a place
-   * 
+   *
    * @param event The event object of the drag and drop feature
    */
   drop(event: CdkDragDrop<string[]>) {
