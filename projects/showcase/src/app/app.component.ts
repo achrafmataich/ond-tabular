@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
-import {AlignmentMappings, DragPreviewMapping, KeyMappings} from "../../../outsiderninjadevs/tabular";
+import { RouterOutlet } from '@angular/router';
+import {
+  AlignmentMappings, DragPreviewCardDirective,
+  DragPreviewMapping,
+  KeyMappings,
+  OndTabularComponent
+} from "../../../outsiderninjadevs/tabular";
 
 interface IUser {
   name: string;
   age: number;
   is_an_admin?: boolean;
 }
+
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, OndTabularComponent, DragPreviewCardDirective],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   usersList: IUser[] = [

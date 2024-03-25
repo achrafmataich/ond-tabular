@@ -13,6 +13,3 @@ export * from './lib/directives/drag-preview-card.directive';
 
 // Types
 export * from './lib/types/mapping';
-
-// Modules
-export * from './lib/ond-tabular.module';

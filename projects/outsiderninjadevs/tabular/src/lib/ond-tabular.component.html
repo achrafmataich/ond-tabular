@@ -26,7 +26,7 @@
                     {{ ele[dragPreviewAttributes.mainAttribute] }}
                   </h3>
                   <p *ngFor="let key of dragPreviewAttributes.otherAttributes">
-                    <strong>{{ key.toString() }}</strong> --
+                    <strong>{{ key }}</strong> --
                     <span>{{ ele[key] ?? "N/A" }}</span>
                   </p>
                 </ng-container>

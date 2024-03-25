@@ -15,6 +15,7 @@ import { DragPreviewCardContext } from '../types/contexts/DragPreviewCardContext
  * ```
  */
 @Directive({
+  standalone: true,
   selector: '[ondDragPreviewCard]'
 })
 export class DragPreviewCardDirective<T extends object> implements OnInit {
