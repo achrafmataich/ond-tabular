@@ -1,6 +1,6 @@
 {
   "name": "@outsiderninjadevs/tabular",
-  "version": "1.1.1",
+  "version": "17.0.0",
   "peerDependencies": {
     "@angular/common": "^17.3.1",
     "@angular/core": "^17.3.1",

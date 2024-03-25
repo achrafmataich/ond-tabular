@@ -23,22 +23,7 @@ npm install @outsiderninjadevs/ond-tabular
 
 ## Usage
 
-1. Import the module `OndTabularModule` in your `@NgModule`
-
-    ```ts
-    import { OndTabularModule } from '@outsiderninjadevs/ond-tabular';
-
-    @NgModule({
-    declarations: [
-        // ...
-    ],
-    imports: [
-        OndTabularModule, // Here is the module!
-        // ...
-    ],
-    })
-    export class YourModule { }
-    ```
+1. We strongly recommend using Angular 17 standalone components, That's why we no more need `OndTabularModule`, All the components in this library are __standalone__
 
 2. Create the list of element and the mappers in your component's typescript file
 
@@ -47,7 +32,13 @@ npm install @outsiderninjadevs/ond-tabular
    What makes this way a good way is that you are sure you respect the types and the mapping logic.
 
     ```ts
-    import {KeyMappings, AlignmentMappings, DragPreviewMapping} from '@outsiderninjadevs/ond-tabular'
+    import {
+        KeyMappings, 
+        AlignmentMappings, 
+        DragPreviewMapping, 
+        OndTabularComponent, 
+        DragPreviewCardDirective
+    } from '@outsiderninjadevs/ond-tabular'
 
     // imports
 
@@ -59,6 +50,8 @@ npm install @outsiderninjadevs/ond-tabular
 
     @Component({
         // properties
+        standalone: true,
+        imports: [/*...*/, OndTabularComponent, DragPreviewCardDirective],
     })
     export class MyComponent {
         usersList: IUser[] = [

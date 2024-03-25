@@ -1,6 +1,6 @@
 {
-  "name": "ond-tabular",
-  "version": "0.0.0",
+  "name": "@outsiderninjadevs/tabular",
+  "version": "17.0.0",
   "scripts": {
     "ng": "ng",
     "test:tabular:ci": "ng test @outsiderninjadevs/tabular --no-watch --no-progress --browsers=ChromeHeadless",
